@@ -13,13 +13,13 @@ import SwiperCore, {
 } from "swiper";
 import "swiper/css/bundle";
 import {
-    FaShare,
-    FaMapMarkerAlt,
-    FaBed,
-    FaBath,
-    FaParking,
-    FaChair,
-  } from "react-icons/fa";
+  FaShare,
+  FaMapMarkerAlt,
+  FaBed,
+  FaBath,
+  FaParking,
+  FaChair,
+} from "react-icons/fa";
 import { getAuth } from "firebase/auth";
 import Contact from "../components/Contact";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
@@ -86,9 +86,9 @@ export default function Listing() {
         </p>
       )}
       <div className="m-4 flex flex-col md:flex-row max-w-6xl lg:mx-auto p-4 rounded-lg shadow-lg bg-white lg:space-x-5">
-       <div className=" w-full ">
+        <div className=" w-full ">
           <p className="text-2xl font-bold mb-3 text-blue-900">
-            {listing.name} - ${" "}
+            {listing.name} - ₹{" "}
             {listing.offer
               ? listing.discountedPrice
                   .toString()
@@ -162,9 +162,7 @@ export default function Listing() {
             <Marker
               position={[listing.geolocation.lat, listing.geolocation.lng]}
             >
-              <Popup>
-              {listing.address}
-              </Popup>
+              <Popup>{listing.address}</Popup>
             </Marker>
           </MapContainer>
         </div>

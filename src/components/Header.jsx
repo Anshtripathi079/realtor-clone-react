@@ -21,7 +21,7 @@ export default function Header() {
     }
   }
   return (
-    <div className="bg-white border-b shadow-sm sticky top-0 z-40">
+    <div className=" border-b shadow-sm sticky top-0 z-40  bg-blue-900">
       <header className="flex justify-between items-center px-3 max-w-6xl mx-auto">
         <div>
           <img
@@ -34,25 +34,25 @@ export default function Header() {
         <div>
           <ul className="flex space-x-10">
             <li
-              className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${
-                pathMatchRoute("/") && "text-black border-b-red-500"
+              className={`cursor-pointer py-3 text-sm font-semibold text-white border-b-[3px] border-b-transparent ${
+                pathMatchRoute("/") && "text-gray-400 border-b-red-500"
               }`}
               onClick={() => navigate("/")}
             >
               Home
             </li>
             <li
-              className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${
-                pathMatchRoute("/offers") && "text-black border-b-red-500"
+              className={`cursor-pointer py-3 text-sm font-semibold text-white border-b-[3px] border-b-transparent ${
+                pathMatchRoute("/offers") && "text-gray-400 border-b-red-500"
               }`}
               onClick={() => navigate("/offers")}
             >
               Offers
             </li>
             <li
-              className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${
+              className={`cursor-pointer py-3 text-sm font-semibold text-white border-b-[3px] border-b-transparent ${
                 (pathMatchRoute("/sign-in") || pathMatchRoute("/profile")) &&
-                "text-black border-b-red-500"
+                "text-gray-400 border-b-red-500"
               }`}
               onClick={() => navigate("/profile")}
             >
